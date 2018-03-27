@@ -1,5 +1,5 @@
 {
-  "name": "gender-api-client",
+  "name": "gender-api.com-client",
   "version": "0.0.1",
   "description": "JavaScript and TypeScript client for Gender-API.com",
   "main": "dist/index.js",

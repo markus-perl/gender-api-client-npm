@@ -17,7 +17,7 @@ Installation
 ------------
 
 ```
-my-project$ spm install gender-api-client --save
+my-project$ npm install gender-api-client --save
 ```
 
 API-Key
