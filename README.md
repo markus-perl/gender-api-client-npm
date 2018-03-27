@@ -17,7 +17,7 @@ Installation
 ------------
 
 ```
-my-project$ npm install gender-api-client --save
+my-project$ npm i gender-api.com-client --save
 ```
 
 API-Key
@@ -35,13 +35,15 @@ Simple Usage
 ---------
 
 ```js
+import {GenderApiClientResultSingleName} from "gender-api.com-client/dist/lib/Result/single-name";
+import {GenderApiClient} from "gender-api.com-client";
+
 const genderApiClient = new index.GenderApiClient("your API key");
 
 try {
-  const name = genderApiClient.getByFirstName('elisabeth');
-  if ($name.genderFound()) {
-      alert($name.getGender()); // will return "female" (possible values: male, female, unknown)
-  }
+  genderApiClient.getByFirstName(firstName, (response: GenderApiClientResultSingleName) => {
+      console.log(response.gender);
+  });
 }
 catch(e) {
   console.log('Error:', e);

@@ -11,7 +11,7 @@ var GenderApiClient = /** @class */ (function () {
     }
     /**
      * @param {string} firstName
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
@@ -21,7 +21,7 @@ var GenderApiClient = /** @class */ (function () {
     /**
      * @param {string} firstName
      * @param {string} country
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
@@ -36,7 +36,7 @@ var GenderApiClient = /** @class */ (function () {
     /**
      * @param {string[]} firstNames
      * @param {string} country
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
@@ -55,7 +55,7 @@ var GenderApiClient = /** @class */ (function () {
     };
     /**
      * @param {string} fullName
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
@@ -65,7 +65,7 @@ var GenderApiClient = /** @class */ (function () {
     /**
      * @param {string} fullName
      * @param {string} country
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
@@ -79,7 +79,7 @@ var GenderApiClient = /** @class */ (function () {
     };
     /**
      * @param {string} emailAddress
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
@@ -89,7 +89,7 @@ var GenderApiClient = /** @class */ (function () {
     /**
      * @param {string} emailAddress
      * @param {string} country
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
@@ -102,7 +102,7 @@ var GenderApiClient = /** @class */ (function () {
         });
     };
     /**
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */

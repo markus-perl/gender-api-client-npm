@@ -1,4 +1,3 @@
-import { genderApiClientCallback } from "./callback";
 export declare class GenderApiClient {
     apiKey: string;
     host: string;
@@ -8,63 +7,63 @@ export declare class GenderApiClient {
     constructor(apiKey: string);
     /**
      * @param {string} firstName
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
-    getByFirstName(firstName: string, callback: genderApiClientCallback): void;
+    getByFirstName(firstName: string, callback: Function): void;
     /**
      * @param {string} firstName
      * @param {string} country
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
-    getByFirstNameAndCountry(firstName: string, country: string, callback: genderApiClientCallback): void;
+    getByFirstNameAndCountry(firstName: string, country: string, callback: Function): void;
     /**
      * @param {string[]} firstNames
      * @param {string} country
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
-    getByMultipleNamesAndCountry(firstNames: string[], country: string, callback: genderApiClientCallback): void;
+    getByMultipleNamesAndCountry(firstNames: string[], country: string, callback: Function): void;
     /**
      * @param {string} fullName
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
-    getByFirstNameAndLastName(fullName: string, callback: genderApiClientCallback): void;
+    getByFirstNameAndLastName(fullName: string, callback: Function): void;
     /**
      * @param {string} fullName
      * @param {string} country
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
-    getByFirstNameAndLastNameAndCountry(fullName: string, country: string, callback: genderApiClientCallback): void;
+    getByFirstNameAndLastNameAndCountry(fullName: string, country: string, callback: Function): void;
     /**
      * @param {string} emailAddress
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
-    getByEmailAddress(emailAddress: string, callback: genderApiClientCallback): void;
+    getByEmailAddress(emailAddress: string, callback: Function): void;
     /**
      * @param {string} emailAddress
      * @param {string} country
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
-    getByEmailAddressAndCountry(emailAddress: string, country: string, callback: genderApiClientCallback): void;
+    getByEmailAddressAndCountry(emailAddress: string, country: string, callback: Function): void;
     /**
-     * @param {genderApiClientCallback} callback
+     * @param {Function} callback
      * @throws Exception
      * @return void
      */
-    getStats(callback: genderApiClientCallback): void;
+    getStats(callback: Function): void;
     /**
      * @param {string} method
      * @param data
