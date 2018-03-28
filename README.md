@@ -41,7 +41,7 @@ can also be used with Angular 2+.
 
 ### Simple Usage
 
-```js
+```
 import {Client as GenderApiClient, ResultSingleName} from "gender-api.com-client";
 
 const genderApiClient = new GenderApiClient("your API key");
@@ -64,7 +64,7 @@ catch(e) {
 
 ### Split First and Last Name
 
-```js
+```
 import {Client as GenderApiClient, ResultSplit} from "gender-api.com-client";
 
 const genderApiClient = new GenderApiClient("your API key");
@@ -91,7 +91,7 @@ catch(e) {
 
 ### Email Address
 
-```js
+```
 import {Client as GenderApiClient, ResultEmailAddress} from "gender-api.com-client";
 
 const genderApiClient = new GenderApiClient("your API key");
@@ -118,7 +118,7 @@ catch(e) {
 
 ### Statistics
 
-```js
+```
 import {Client as GenderApiClient, ResultStats} from "gender-api.com-client";
 
 const genderApiClient = new GenderApiClient("your API key");
@@ -141,7 +141,7 @@ catch(e) {
 
 ### Simple Usage
 
-```js
+```
 try {
         var GenderApi = require('gender-api.com-client');
 
@@ -165,7 +165,7 @@ try {
 
 ### Split First and Last Name
 
-```js
+```
 try {
     try {
         var GenderApi = require('gender-api.com-client');
@@ -193,7 +193,7 @@ try {
 
 ### Email Address
 
-```js
+```
     try {
         var GenderApi = require('gender-api.com-client');
 
@@ -220,7 +220,7 @@ try {
 
 ### Statistics
 
-```js
+```
     try {
         var GenderApi = require('gender-api.com-client');
 

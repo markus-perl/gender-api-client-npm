@@ -1,6 +1,6 @@
 {
   "name": "gender-api.com-client",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "JavaScript and TypeScript client for Gender-API.com",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,12 +8,14 @@
     "build": "tsc",
     "test": "mocha --reporter spec"
   },
+  "readme": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/markus-perl/gender-api-client-npm.git"
   },
   "keywords": [
     "gender",
+    "genderize",
     "api",
     "gender-api.com"
   ],
