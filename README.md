@@ -33,8 +33,8 @@ gender-api-client-npm$ KEY=<your API key> npm run test
 
 Usage
 ------------
-#### [TypeScript](#TypeScript)
-#### [JavaScript](#JavaScript)
+#### [TypeScript](#typescript)
+#### [JavaScript](#javascript)
 
 ## TypeScript
 can also be used with Angular 2+.
