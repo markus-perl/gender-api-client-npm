@@ -41,7 +41,7 @@ can also be used with Angular 2+.
 
 ### Simple Usage
 
-```
+```typescript
 import {Client as GenderApiClient, ResultSingleName} from "gender-api.com-client";
 
 const genderApiClient = new GenderApiClient("your API key");
@@ -64,7 +64,7 @@ catch(e) {
 
 ### Split First and Last Name
 
-```
+```typescript
 import {Client as GenderApiClient, ResultSplit} from "gender-api.com-client";
 
 const genderApiClient = new GenderApiClient("your API key");
@@ -91,7 +91,7 @@ catch(e) {
 
 ### Email Address
 
-```
+```typescript
 import {Client as GenderApiClient, ResultEmailAddress} from "gender-api.com-client";
 
 const genderApiClient = new GenderApiClient("your API key");
@@ -118,7 +118,7 @@ catch(e) {
 
 ### Statistics
 
-```
+```typescript
 import {Client as GenderApiClient, ResultStats} from "gender-api.com-client";
 
 const genderApiClient = new GenderApiClient("your API key");
@@ -141,7 +141,7 @@ catch(e) {
 
 ### Simple Usage
 
-```
+```javascript
 try {
         var GenderApi = require('gender-api.com-client');
 
@@ -165,62 +165,61 @@ try {
 
 ### Split First and Last Name
 
-```
+```javascript
 try {
-    try {
-        var GenderApi = require('gender-api.com-client');
+    var GenderApi = require('gender-api.com-client');
 
-        var genderApiClient = new GenderApi.Client('QRFtEEezuBSYLJFYSJ');
+    var genderApiClient = new GenderApi.Client('QRFtEEezuBSYLJFYSJ');
 
-        genderApiClient.getByFirstNameAndLastName('theresa miller', function (response) {
-            console.log(response.gender); //female
-            console.log(response.accuracy); //98
-            console.log(response.first_name); //Theresa
-            console.log(response.last_name); //Miller
-        });
+    genderApiClient.getByFirstNameAndLastName('theresa miller', function (response) {
+        console.log(response.gender); //female
+        console.log(response.accuracy); //98
+        console.log(response.first_name); //Theresa
+        console.log(response.last_name); //Miller
+    });
 
-        genderApiClient.getByFirstNameAndLastNameAndCountry('john johnson', 'US', function (response) {
-            console.log(response.gender); //male
-            console.log(response.accuracy); //99
-            console.log(response.first_name); //John
-            console.log(response.last_name); //Johnson
-        });
-    }
-    catch(e) {
-        console.log('Error:', e);
-    }
+    genderApiClient.getByFirstNameAndLastNameAndCountry('john johnson', 'US', function (response) {
+        console.log(response.gender); //male
+        console.log(response.accuracy); //99
+        console.log(response.first_name); //John
+        console.log(response.last_name); //Johnson
+    });
+}
+catch(e) {
+    console.log('Error:', e);
+}
 ```
 
 ### Email Address
 
-```
-    try {
-        var GenderApi = require('gender-api.com-client');
+```javascript
+try {
+    var GenderApi = require('gender-api.com-client');
 
-        var genderApiClient = new GenderApi.Client('QRFtEEezuBSYLJFYSJ');
+    var genderApiClient = new GenderApi.Client('QRFtEEezuBSYLJFYSJ');
 
-        genderApiClient.getByEmailAddress('theresa.miller@gmail.com', function (response) {
-            console.log(response.gender); //female
-            console.log(response.accuracy); //98
-            console.log(response.first_name); //Theresa
-            console.log(response.last_name); //Miller
-        });
+    genderApiClient.getByEmailAddress('theresa.miller@gmail.com', function (response) {
+        console.log(response.gender); //female
+        console.log(response.accuracy); //98
+        console.log(response.first_name); //Theresa
+        console.log(response.last_name); //Miller
+    });
 
-        genderApiClient.getByEmailAddressAndCountry('john.johnson44@hotmail.com', 'US', function (response) {
-            console.log(response.gender); //male
-            console.log(response.accuracy); //99
-            console.log(response.first_name); //John
-            console.log(response.last_name); //Johnson
-        });
-    }
-    catch (e) {
-        console.log('Error:', e);
-    }
+    genderApiClient.getByEmailAddressAndCountry('john.johnson44@hotmail.com', 'US', function (response) {
+        console.log(response.gender); //male
+        console.log(response.accuracy); //99
+        console.log(response.first_name); //John
+        console.log(response.last_name); //Johnson
+    });
+}
+catch (e) {
+    console.log('Error:', e);
+}
 ```
 
 ### Statistics
 
-```
+```javascript
     try {
         var GenderApi = require('gender-api.com-client');
 
