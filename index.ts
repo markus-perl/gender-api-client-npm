@@ -1,5 +1,5 @@
 
-export * from './lib/gender-api-client';
+export * from './lib/client';
 export * from './lib/result/email-address';
 export * from './lib/result/multiple-names';
 export * from './lib/result/single-name';

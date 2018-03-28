@@ -1,11 +1,11 @@
-import {GenderApiClientResultAbstract} from "./abstract";
-import {GenderApiClientResultSingleName} from "./single-name";
+import {ResultAbstract} from "./abstract";
+import {ResultSingleName} from "./single-name";
 
-export class GenderApiClientResultMultipleNames extends GenderApiClientResultAbstract implements Iterator<GenderApiClientResultSingleName> {
+export class ResultMultipleNames extends ResultAbstract implements Iterator<ResultSingleName> {
 
     private pointer = 0;
 
-    public next(): IteratorResult<GenderApiClientResultSingleName> {
+    public next(): IteratorResult<ResultSingleName> {
         if (this.pointer < this.names.length) {
             return {
                 done: false,
@@ -18,7 +18,7 @@ export class GenderApiClientResultMultipleNames extends GenderApiClientResultAbs
         }
     }
 
-    constructor(public names: GenderApiClientResultSingleName[]) {
+    constructor(public names: ResultSingleName[]) {
         super();
     }
 }

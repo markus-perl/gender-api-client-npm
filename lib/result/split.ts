@@ -1,6 +1,6 @@
-import {GenderApiClientResultAbstract} from "./abstract";
+import {ResultAbstract} from "./abstract";
 
-export class GenderApiClientResultSplit extends GenderApiClientResultAbstract{
+export class ResultSplit extends ResultAbstract{
     constructor(public last_name: string,
                 public first_name: string,
                 public name: string,

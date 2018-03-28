@@ -1,6 +1,6 @@
-import {GenderApiClientResultAbstract} from "./abstract";
+import {ResultAbstract} from "./abstract";
 
-export class GenderApiClientResultStats extends GenderApiClientResultAbstract{
+export class ResultStats extends ResultAbstract{
     constructor(public key: string,
                 public is_limit_reached: boolean,
                 public remaining_requests: Number,

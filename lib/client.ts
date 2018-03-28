@@ -1,10 +1,10 @@
-import {GenderApiClientResultSingleName} from "./result/single-name";
-import {GenderApiClientResultMultipleNames} from "./result/multiple-names";
-import {GenderApiClientResultSplit} from "./result/split";
-import {GenderApiClientResultStats} from "./result/stats";
-import {GenderApiClientResultEmailAddress} from "./result/email-address";
+import {ResultSingleName} from "./result/single-name";
+import {ResultMultipleNames} from "./result/multiple-names";
+import {ResultSplit} from "./result/split";
+import {ResultStats} from "./result/stats";
+import {ResultEmailAddress} from "./result/email-address";
 
-export class GenderApiClient {
+export class Client {
 
     public host = 'https://gender-api.com';
 
@@ -36,7 +36,7 @@ export class GenderApiClient {
             name: firstName,
             country: country
         }, (json: any) => {
-            callback(<GenderApiClientResultSingleName> json);
+            callback(<ResultSingleName> json);
         });
     }
 
@@ -52,11 +52,11 @@ export class GenderApiClient {
             name: firstNames.join(';'),
             country: country
         }, (json: any) => {
-            let names: GenderApiClientResultSingleName[] = [];
+            let names: ResultSingleName[] = [];
             for (let name of json.result) {
-                names.push(<GenderApiClientResultSingleName> name);
+                names.push(<ResultSingleName> name);
             }
-            callback(new GenderApiClientResultMultipleNames(names));
+            callback(new ResultMultipleNames(names));
         });
     }
 
@@ -82,7 +82,7 @@ export class GenderApiClient {
             split: fullName,
             country: country
         }, (json: any) => {
-            callback(<GenderApiClientResultSplit> json);
+            callback(<ResultSplit> json);
         });
     }
 
@@ -108,7 +108,7 @@ export class GenderApiClient {
             email: emailAddress,
             country: country
         }, (json: any) => {
-            callback(<GenderApiClientResultEmailAddress> json);
+            callback(<ResultEmailAddress> json);
         });
     }
 
@@ -119,7 +119,7 @@ export class GenderApiClient {
      */
     public getStats(callback: Function): void {
         this.performRequest('get-stats', {}, (json: any) => {
-            callback(<GenderApiClientResultStats> json);
+            callback(<ResultStats> json);
         });
     }
 

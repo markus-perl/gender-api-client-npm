@@ -39,17 +39,17 @@ Simple Usage
 ---------
 
 ```js
-import {GenderApiClient, GenderApiClientResultSingleName} from "gender-api.com-client";
+import {GenderApiClient, ResultSingleName} from "gender-api.com-client";
 
 const genderApiClient = new index.GenderApiClient("your API key");
 
 try {
-    genderApiClient.getByFirstName('theresa', (response: GenderApiClientResultSingleName) => {
+    genderApiClient.getByFirstName('theresa', (response: ResultSingleName) => {
     console.log(response.gender); //female
     console.log(response.accuracy); //98
     });
   
-    genderApiClient.getByFirstNameAndCountry('john', 'US', (response: GenderApiClientResultSingleName) => {
+    genderApiClient.getByFirstNameAndCountry('john', 'US', (response: ResultSingleName) => {
       console.log(response.gender); //male
       console.log(response.accuracy); //99
     });
@@ -63,19 +63,19 @@ Split First and Last Name
 -------------------------
 
 ```js
-import {GenderApiClient, GenderApiClientResultSplit} from "gender-api.com-client";
+import {GenderApiClient, ResultSplit} from "gender-api.com-client";
 
 const genderApiClient = new index.GenderApiClient("your API key");
 
 try {
-    genderApiClient.getByFirstNameAndLastName('theresa miller', (response: GenderApiClientResultSplit) => {
+    genderApiClient.getByFirstNameAndLastName('theresa miller', (response: ResultSplit) => {
     console.log(response.gender); //female
     console.log(response.accuracy); //98
     console.log(response.first_name); //Theresa
     console.log(response.last_name); //Miller
     });
   
-    genderApiClient.getByFirstNameAndLastNameAndCountry('john johnson', 'US', (response: GenderApiClientResultSplit) => {
+    genderApiClient.getByFirstNameAndLastNameAndCountry('john johnson', 'US', (response: ResultSplit) => {
       console.log(response.gender); //male
       console.log(response.accuracy); //99
       console.log(response.first_name); //John
@@ -92,19 +92,19 @@ Email Address
 -------------------------
 
 ```js
-import {GenderApiClient, GenderApiClientResultEmailAddress} from "gender-api.com-client";
+import {GenderApiClient, ResultEmailAddress} from "gender-api.com-client";
 
 const genderApiClient = new index.GenderApiClient("your API key");
 
 try {
-    genderApiClient.getByEmailAddress('theresa.miller@gmail.com', (response: GenderApiClientResultEmailAddress) => {
+    genderApiClient.getByEmailAddress('theresa.miller@gmail.com', (response: ResultEmailAddress) => {
     console.log(response.gender); //female
     console.log(response.accuracy); //98
     console.log(response.first_name); //Theresa
     console.log(response.last_name); //Miller
     });
   
-    genderApiClient.getByEmailAddressAndCountry('john.johnson44@hotmail.com', 'US', (response: GenderApiClientResultEmailAddress) => {
+    genderApiClient.getByEmailAddressAndCountry('john.johnson44@hotmail.com', 'US', (response: ResultEmailAddress) => {
       console.log(response.gender); //male
       console.log(response.accuracy); //99
       console.log(response.first_name); //John
@@ -121,12 +121,12 @@ Statistics
 -------------------------
 
 ```js
-import {GenderApiClient, GenderApiClientResultStats} from "gender-api.com-client";
+import {GenderApiClient, ResultStats} from "gender-api.com-client";
 
 const genderApiClient = new index.GenderApiClient("your API key");
 
 try {
-    genderApiClient.getStats((response: GenderApiClientResultStats) => {
+    genderApiClient.getStats((response: ResultStats) => {
     console.log(response.is_limit_reached); //false
     console.log(response.remaining_requests); //Available Credits
     console.log(response.amount_month_start); //Credits at the start of the month

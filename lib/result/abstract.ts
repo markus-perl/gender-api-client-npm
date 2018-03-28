@@ -1,3 +1,3 @@
-export abstract class GenderApiClientResultAbstract {
+export abstract class ResultAbstract {
 
 }
