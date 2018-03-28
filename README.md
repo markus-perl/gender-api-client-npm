@@ -20,6 +20,11 @@ Installation
 my-project$ npm i gender-api.com-client --save
 ```
 
+Usage
+------------
+#### [TypeScript Examples](#typescript)
+#### [JavaScript Example](#javascript)
+
 API-Key
 -----------
 Get a free API key here: <https://gender-api.com/en/account>
@@ -30,11 +35,6 @@ Testing
 ```
 gender-api-client-npm$ KEY=<your API key> npm run test
 ```
-
-Usage
-------------
-#### [TypeScript Examples](#typescript)
-#### [JavaScript Example](#javascript)
 
 ## TypeScript
 can also be used with Angular 2+.
@@ -60,7 +60,7 @@ try {
 catch(e) {
   console.log('Error:', e);
 }
-````
+```
 
 ### Split First and Last Name
 
@@ -87,8 +87,7 @@ try {
 catch(e) {
   console.log('Error:', e);
 }
-````
-
+```
 
 ### Email Address
 
@@ -115,8 +114,7 @@ try {
 catch(e) {
   console.log('Error:', e);
 }
-````
-
+```
 
 ### Statistics
 
@@ -137,8 +135,7 @@ try {
 catch(e) {
   console.log('Error:', e);
 }
-````
-
+```
 
 ## JavaScript
 
@@ -146,15 +143,97 @@ catch(e) {
 
 ```js
 try {
-    var GenderApi = require('gender-api.com-client');
+        var GenderApi = require('gender-api.com-client');
 
-    var client = new GenderApi.Client('QRFtEEezuBSYLJFYSJ');
-    genderApiClient.getByFirstName('markus', function (result) {
-        console.log(result.gender); //male
-        console.log(result.accuracy); //99
-    });
-}
-catch(e) {
-  console.log('Error:', e);
-}
+        var genderApiClient = new GenderApi.Client('QRFtEEezuBSYLJFYSJ');
+
+        genderApiClient.getByFirstName('theresa', function (response) {
+            console.log(response.gender); //female
+            console.log(response.accuracy); //98
+        });
+
+        genderApiClient.getByFirstNameAndCountry('john', 'US', function (response) {
+            console.log(response.gender); //male
+            console.log(response.accuracy); //99
+        });
+
+    }
+    catch(e) {
+        console.log('Error:', e);
+    }
+```
+
+### Split First and Last Name
+
+```js
+try {
+    try {
+        var GenderApi = require('gender-api.com-client');
+
+        var genderApiClient = new GenderApi.Client('QRFtEEezuBSYLJFYSJ');
+
+        genderApiClient.getByFirstNameAndLastName('theresa miller', function (response) {
+            console.log(response.gender); //female
+            console.log(response.accuracy); //98
+            console.log(response.first_name); //Theresa
+            console.log(response.last_name); //Miller
+        });
+
+        genderApiClient.getByFirstNameAndLastNameAndCountry('john johnson', 'US', function (response) {
+            console.log(response.gender); //male
+            console.log(response.accuracy); //99
+            console.log(response.first_name); //John
+            console.log(response.last_name); //Johnson
+        });
+    }
+    catch(e) {
+        console.log('Error:', e);
+    }
+```
+
+### Email Address
+
+```js
+    try {
+        var GenderApi = require('gender-api.com-client');
+
+        var genderApiClient = new GenderApi.Client('QRFtEEezuBSYLJFYSJ');
+
+        genderApiClient.getByEmailAddress('theresa.miller@gmail.com', function (response) {
+            console.log(response.gender); //female
+            console.log(response.accuracy); //98
+            console.log(response.first_name); //Theresa
+            console.log(response.last_name); //Miller
+        });
+
+        genderApiClient.getByEmailAddressAndCountry('john.johnson44@hotmail.com', 'US', function (response) {
+            console.log(response.gender); //male
+            console.log(response.accuracy); //99
+            console.log(response.first_name); //John
+            console.log(response.last_name); //Johnson
+        });
+    }
+    catch (e) {
+        console.log('Error:', e);
+    }
+```
+
+### Statistics
+
+```js
+    try {
+        var GenderApi = require('gender-api.com-client');
+
+        var genderApiClient = new GenderApi.Client('QRFtEEezuBSYLJFYSJ');
+
+        genderApiClient.getStats(function (response) {
+            console.log(response.is_limit_reached); //false
+            console.log(response.remaining_requests); //Available Credits
+            console.log(response.amount_month_start); //Credits at the start of the month
+            console.log(response.amount_month_bought); //Credits bought this month
+        });
+    }
+    catch (e) {
+        console.log('Error:', e);
+    }
 ```
