@@ -1,6 +1,6 @@
 {
   "name": "gender-api.com-client",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "JavaScript and TypeScript client for Gender-API.com",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

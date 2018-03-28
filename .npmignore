@@ -1,1 +1,4 @@
 lib/
+tsconfig.json
+.idea
+test
