@@ -1,4 +1,4 @@
-Gender-API.com JavaScript and TypeScript Client
+Official Gender-API.com JavaScript And TypeScript Client
 =========================
 
 About
