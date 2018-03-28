@@ -11,11 +11,12 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var abstract_1 = require("./abstract");
-var GenderApiClientResultEmailAddress = /** @class */ (function (_super) {
-    __extends(GenderApiClientResultEmailAddress, _super);
-    function GenderApiClientResultEmailAddress(name_sanitized, last_name, email, mail_provider, country, gender, samples, accuracy, duration, credits_used) {
+var ResultEmailAddress = /** @class */ (function (_super) {
+    __extends(ResultEmailAddress, _super);
+    function ResultEmailAddress(name_sanitized, first_name, last_name, email, mail_provider, country, gender, samples, accuracy, duration, credits_used) {
         var _this = _super.call(this) || this;
         _this.name_sanitized = name_sanitized;
+        _this.first_name = first_name;
         _this.last_name = last_name;
         _this.email = email;
         _this.mail_provider = mail_provider;
@@ -27,6 +28,6 @@ var GenderApiClientResultEmailAddress = /** @class */ (function (_super) {
         _this.credits_used = credits_used;
         return _this;
     }
-    return GenderApiClientResultEmailAddress;
-}(abstract_1.GenderApiClientResultAbstract));
-exports.GenderApiClientResultEmailAddress = GenderApiClientResultEmailAddress;
+    return ResultEmailAddress;
+}(abstract_1.ResultAbstract));
+exports.ResultEmailAddress = ResultEmailAddress;

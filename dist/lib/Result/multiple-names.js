@@ -11,27 +11,19 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var abstract_1 = require("./abstract");
-var GenderApiClientResultMultipleNames = /** @class */ (function (_super) {
-    __extends(GenderApiClientResultMultipleNames, _super);
-    function GenderApiClientResultMultipleNames(names) {
+var ResultMultipleNames = /** @class */ (function (_super) {
+    __extends(ResultMultipleNames, _super);
+    function ResultMultipleNames(names) {
         var _this = _super.call(this) || this;
         _this.names = names;
-        _this.pointer = 0;
         return _this;
     }
-    GenderApiClientResultMultipleNames.prototype.next = function () {
-        if (this.pointer < this.names.length) {
-            return {
-                done: false,
-                value: this.names[this.pointer++]
-            };
-        }
-        else {
-            return {
-                done: true
-            };
-        }
+    /**
+     * @returns {ResultSingleName[]}
+     */
+    ResultMultipleNames.prototype.getNames = function () {
+        return this.names;
     };
-    return GenderApiClientResultMultipleNames;
-}(abstract_1.GenderApiClientResultAbstract));
-exports.GenderApiClientResultMultipleNames = GenderApiClientResultMultipleNames;
+    return ResultMultipleNames;
+}(abstract_1.ResultAbstract));
+exports.ResultMultipleNames = ResultMultipleNames;

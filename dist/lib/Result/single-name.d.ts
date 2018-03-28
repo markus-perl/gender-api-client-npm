@@ -1,5 +1,5 @@
-import { GenderApiClientResultAbstract } from "./abstract";
-export declare class GenderApiClientResultSingleName extends GenderApiClientResultAbstract {
+import { ResultAbstract } from "./abstract";
+export declare class ResultSingleName extends ResultAbstract {
     name_sanitized: string;
     country: string;
     gender: string;

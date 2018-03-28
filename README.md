@@ -3,7 +3,7 @@ Gender-API.com JavaScript and TypeScript Client
 
 About
 ------------
-Gender-API.com JavaScript and TypeScript Client.
+Gender-API.com JavaScript and TypeScript GenderApiClient.
 
 Homepage: <https://gender-api.com>
 
@@ -31,17 +31,20 @@ Testing
 gender-api-client-npm$ KEY=<your API key> npm run test
 ```
 
-TypeScript
-==========
+Usage
+------------
+#### [TypeScript](#TypeScript)
+#### [JavaScript](#JavaScript)
+
+## TypeScript
 can also be used with Angular 2+.
 
-Simple Usage
----------
+### Simple Usage
 
 ```js
-import {GenderApiClient, ResultSingleName} from "gender-api.com-client";
+import {Client as GenderApiClient, ResultSingleName} from "gender-api.com-client";
 
-const genderApiClient = new index.GenderApiClient("your API key");
+const genderApiClient = new GenderApiClient("your API key");
 
 try {
     genderApiClient.getByFirstName('theresa', (response: ResultSingleName) => {
@@ -59,13 +62,12 @@ catch(e) {
 }
 ````
 
-Split First and Last Name
--------------------------
+### Split First and Last Name
 
 ```js
-import {GenderApiClient, ResultSplit} from "gender-api.com-client";
+import {Client as GenderApiClient, ResultSplit} from "gender-api.com-client";
 
-const genderApiClient = new index.GenderApiClient("your API key");
+const genderApiClient = new GenderApiClient("your API key");
 
 try {
     genderApiClient.getByFirstNameAndLastName('theresa miller', (response: ResultSplit) => {
@@ -88,13 +90,12 @@ catch(e) {
 ````
 
 
-Email Address
--------------------------
+### Email Address
 
 ```js
-import {GenderApiClient, ResultEmailAddress} from "gender-api.com-client";
+import {Client as GenderApiClient, ResultEmailAddress} from "gender-api.com-client";
 
-const genderApiClient = new index.GenderApiClient("your API key");
+const genderApiClient = new GenderApiClient("your API key");
 
 try {
     genderApiClient.getByEmailAddress('theresa.miller@gmail.com', (response: ResultEmailAddress) => {
@@ -117,13 +118,12 @@ catch(e) {
 ````
 
 
-Statistics
--------------------------
+### Statistics
 
 ```js
-import {GenderApiClient, ResultStats} from "gender-api.com-client";
+import {Client as GenderApiClient, ResultStats} from "gender-api.com-client";
 
-const genderApiClient = new index.GenderApiClient("your API key");
+const genderApiClient = new GenderApiClient("your API key");
 
 try {
     genderApiClient.getStats((response: ResultStats) => {
@@ -138,3 +138,23 @@ catch(e) {
   console.log('Error:', e);
 }
 ````
+
+
+## JavaScript
+
+### Simple Usage
+
+```js
+try {
+    var GenderApi = require('gender-api.com-client');
+
+    var client = new GenderApi.Client('QRFtEEezuBSYLJFYSJ');
+    genderApiClient.getByFirstName('markus', function (result) {
+        console.log(result.gender); //male
+        console.log(result.accuracy); //99
+    });
+}
+catch(e) {
+  console.log('Error:', e);
+}
+```

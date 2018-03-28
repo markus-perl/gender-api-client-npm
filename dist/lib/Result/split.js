@@ -11,9 +11,9 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var abstract_1 = require("./abstract");
-var GenderApiClientResultSplit = /** @class */ (function (_super) {
-    __extends(GenderApiClientResultSplit, _super);
-    function GenderApiClientResultSplit(last_name, first_name, name, gender, samples, accuracy, duration, credits_used) {
+var ResultSplit = /** @class */ (function (_super) {
+    __extends(ResultSplit, _super);
+    function ResultSplit(last_name, first_name, name, gender, samples, accuracy, duration, credits_used) {
         var _this = _super.call(this) || this;
         _this.last_name = last_name;
         _this.first_name = first_name;
@@ -25,6 +25,6 @@ var GenderApiClientResultSplit = /** @class */ (function (_super) {
         _this.credits_used = credits_used;
         return _this;
     }
-    return GenderApiClientResultSplit;
-}(abstract_1.GenderApiClientResultAbstract));
-exports.GenderApiClientResultSplit = GenderApiClientResultSplit;
+    return ResultSplit;
+}(abstract_1.ResultAbstract));
+exports.ResultSplit = ResultSplit;

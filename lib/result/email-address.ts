@@ -2,6 +2,7 @@ import {ResultAbstract} from "./abstract";
 
 export class ResultEmailAddress extends ResultAbstract{
     constructor(public name_sanitized: string,
+                public first_name: string,
                 public last_name: string,
                 public email: string,
                 public mail_provider: string,

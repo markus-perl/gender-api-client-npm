@@ -1,2 +1,2 @@
-export declare abstract class GenderApiClientResultAbstract {
+export declare abstract class ResultAbstract {
 }

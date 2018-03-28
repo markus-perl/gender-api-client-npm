@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var GenderApiClientResultAbstract = /** @class */ (function () {
-    function GenderApiClientResultAbstract() {
+var ResultAbstract = /** @class */ (function () {
+    function ResultAbstract() {
     }
-    return GenderApiClientResultAbstract;
+    return ResultAbstract;
 }());
-exports.GenderApiClientResultAbstract = GenderApiClientResultAbstract;
+exports.ResultAbstract = ResultAbstract;
