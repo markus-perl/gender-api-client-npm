@@ -3,7 +3,7 @@ Gender-API.com JavaScript and TypeScript Client
 
 About
 ------------
-Gender-API.com JavaScript and TypeScript GenderApiClient.
+Gender-API.com JavaScript and TypeScript client.
 
 Homepage: <https://gender-api.com>
 
