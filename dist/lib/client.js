@@ -43,7 +43,8 @@ var Client = /** @class */ (function () {
     Client.prototype.getByMultipleNamesAndCountry = function (firstNames, country, callback) {
         this.performRequest('get', {
             name: firstNames.join(';'),
-            country: country
+            country: country,
+            multi: 'true',
         }, function (json) {
             var names = [];
             for (var _i = 0, _a = json.result; _i < _a.length; _i++) {

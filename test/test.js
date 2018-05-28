@@ -2,7 +2,7 @@
 let index = require('../dist/index.js');
 let assert = require('assert');
 
-const genderApiClient = new index.GenderApiClient(process.env.KEY);
+const genderApiClient = new index.Client(process.env.KEY);
 
 describe('getGender from name', function() {
     it('markus DE should return male', (done) => {
@@ -33,12 +33,12 @@ describe('getGender from name', function() {
 
 describe('getGender from multiple names', function() {
     it('should return two results', (done) => {
-        genderApiClient.getByMultipleNamesAndCountry(['markus', 'tanja'], 'IT', (response) => {
+        genderApiClient.getByMultipleNamesAndCountry(['markus', 'Tanja'], 'IT', (response) => {
             assert.equal(response.names.length, 2);
             assert.equal(response.names[0].gender, 'male');
             assert.equal(response.names[0].name, 'markus');
             assert.equal(response.names[1].gender, 'female');
-            assert.equal(response.names[1].name, 'tanja');
+            assert.equal(response.names[1].name, 'Tanja');
             done();
         });
     });

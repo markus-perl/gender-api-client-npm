@@ -50,7 +50,8 @@ export class Client {
     public getByMultipleNamesAndCountry(firstNames: string[], country: string, callback: Function): void {
         this.performRequest('get', {
             name: firstNames.join(';'),
-            country: country
+            country: country,
+            multi: 'true',
         }, (json: any) => {
             let names: ResultSingleName[] = [];
             for (let name of json.result) {

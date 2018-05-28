@@ -31,13 +31,6 @@ API-Key
 -----------
 Get a free API key here: <https://gender-api.com/en/account>
 
-Testing
-------------
-
-```
-gender-api-client-npm$ KEY=<your API key> npm run test
-```
-
 ## TypeScript
 can also be used with Angular 2+.
 
@@ -237,4 +230,19 @@ try {
 catch (e) {
     console.log('Error:', e);
     }
+```
+
+
+Testing
+------------
+
+```
+gender-api-client-npm$ KEY=<your API key> npm run test
+```
+
+Build project
+------------
+
+```
+gender-api-client-npm$ npm run build
 ```
