@@ -3,6 +3,7 @@ import {ResultMultipleNames} from "./result/multiple-names";
 import {ResultSplit} from "./result/split";
 import {ResultStats} from "./result/stats";
 import {ResultEmailAddress} from "./result/email-address";
+import * as https from 'https';
 
 export class Client {
 
@@ -139,7 +140,6 @@ export class Client {
 
         const endpoint = '/' + method + '?key=' + this.apiKey + formData;
 
-        const https = require('https');
         https.get(this.host + endpoint, (resp: any) => {
             let data = '';
 

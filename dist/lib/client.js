@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var multiple_names_1 = require("./result/multiple-names");
+var https = require("https");
 var Client = /** @class */ (function () {
     /**
      * @param {string} apiKey
@@ -124,7 +125,6 @@ var Client = /** @class */ (function () {
             formData += '&' + dataKeys[i] + '=' + encodeURI(data[dataKeys[i]]);
         }
         var endpoint = '/' + method + '?key=' + this.apiKey + formData;
-        var https = require('https');
         https.get(this.host + endpoint, function (resp) {
             var data = '';
             resp.on('data', function (chunk) {
